@@ -2,8 +2,10 @@ name: CI
 
 # Trigger the workflow on push or pull request
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - main # change this to 'master' if necessary!
+  pull_request:
 
 jobs:
   # The CI test job
