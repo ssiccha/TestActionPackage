@@ -4,7 +4,8 @@
 #! @Chapter Introduction
 #!
 #! TestActionPackage is a package which does some
-#! interesting and cool things
+#! interesting and cool things.
+#! Made with the <C>PackageMaker</C> package by Max Horn.
 #!
 #! @Chapter Functionality
 #!
