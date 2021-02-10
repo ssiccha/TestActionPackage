@@ -10,12 +10,25 @@ on:
 jobs:
   # The CI test job
   test:
-    name: CI test
+    name: ${{ matrix.gap-branch }} - HPCGAP ${{ matrix.HPCGAP }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        gap-branch:
+          - master
+          - stable-4.11
+        HPCGAP:
+          - no
+          - yes
 
     steps:
       - uses: actions/checkout@v2
       - uses: gap-actions/setup-gap-for-packages@v1
+        with:
+          GAPBRANCH: ${{ matrix.gap-branch }}
+          HPCGAP: ${{ matrix.HPCGAP }}
+          GAP_PKGS_TO_BUILD: 'io orb profiling'
       - uses: gap-actions/run-test-for-packages@v1
 
   # The documentation job
