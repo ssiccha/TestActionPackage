@@ -1,5 +1,5 @@
 #
-# TestActionPackage: Empty package to try out gap-actions
+# TestActionPackage: Minimal package to try out gap-actions
 #
 #! @Chapter Introduction
 #!

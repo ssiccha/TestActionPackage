@@ -1,6 +1,6 @@
 # The GAP package TestActionPackage
 
-Empty package to try out gap-actions.
+Minimal package to try out gap-actions.
 Made with [PackageMaker](https://github.com/gap-system/PackageMaker) by Max Horn.
 
 ## License
