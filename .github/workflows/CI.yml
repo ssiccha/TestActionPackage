@@ -18,9 +18,10 @@ jobs:
         gap-branch:
           - master
           - stable-4.11
-        HPCGAP:
-          - no
-          - yes
+        HPCGAP: ['no']
+        include:
+          - gap-branch: master
+            HPCGAP: 'yes'
 
     steps:
       - uses: actions/checkout@v2
