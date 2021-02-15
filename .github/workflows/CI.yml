@@ -2,10 +2,8 @@ name: CI
 
 # Trigger the workflow on push or pull request
 on:
-  push:
-    branches:
-      - main # change this to 'master' if necessary!
-  pull_request:
+  - push
+  - pull_request
 
 jobs:
   # The CI test job
@@ -24,6 +22,7 @@ jobs:
             HPCGAP: 'yes'
 
     steps:
+      - uses: fkirc/skip-duplicate-actions@master
       - uses: actions/checkout@v2
       - uses: gap-actions/setup-gap-for-packages@v1
         with:
